@@ -1,0 +1,1 @@
+export const streamId = `ryanwould.eth/logstore-system`;

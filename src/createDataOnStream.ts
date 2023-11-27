@@ -1,6 +1,7 @@
 import { LogStoreClient } from "@logsn/client";
 import * as os from "os";
 import * as fs from "fs";
+import { streamId } from "./constants";
 
 // getting privateKey from the cli configuration, we could get from .env
 const homeDir = os.homedir();
@@ -14,8 +15,6 @@ const client = new LogStoreClient({
     privateKey: privateKey,
   },
 });
-
-const streamId = `0xd95083fbf72897f8a6607f27891e814b29d843b3/tutorial_1_wiehqew`;
 
 const stream = await client.getStream(streamId);
 
